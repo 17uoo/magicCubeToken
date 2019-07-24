@@ -1,7 +1,9 @@
 pragma solidity ^0.4.2;
 import "./standard/token/ERC20/StandardToken.sol";
+import "./standard/token/ERC20/BurnableToken.sol";
+import "./standard/token/ERC20/MintableToken.sol";
 
-contract MagicCubeToken is StandardToken {
+contract MagicCubeToken is BurnableToken, MintableToken, StandardToken {
     string public name = "MagicCubeToken"; // Current contract name
     string public symbol = "MCC"; // Current contract symbol
     uint public decimals = 4;  // Keep 4 digits after the decimal point
